@@ -1,18 +1,12 @@
 #!/bin/bash
 set -e
 
-PROJECT_NAME="formbricks-cli-seeder"
-
-echo "Creating project: $PROJECT_NAME"
-
-mkdir -p $PROJECT_NAME
-cd $PROJECT_NAME
+echo "Creating project structure in current directory..."
 
 # Main entrypoint
 touch main.py
 
 # Source code structure
-mkdir -p src/formbricks_cli
 mkdir -p src/formbricks_cli/commands
 mkdir -p src/formbricks_cli/core
 mkdir -p src/formbricks_cli/services
@@ -28,7 +22,7 @@ touch src/formbricks_cli/commands/down.py
 touch src/formbricks_cli/commands/generate.py
 touch src/formbricks_cli/commands/seed.py
 
-# Core (config & models)
+# Core
 touch src/formbricks_cli/core/__init__.py
 touch src/formbricks_cli/core/config.py
 touch src/formbricks_cli/core/models.py
@@ -54,4 +48,4 @@ touch .env.example
 touch .gitignore
 touch README.md
 
-echo "✅ Project structure created successfully."
+echo "✅ Project structure created successfully in current folder."
